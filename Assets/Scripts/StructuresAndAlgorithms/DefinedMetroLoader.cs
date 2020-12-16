@@ -104,6 +104,12 @@ namespace StructuresAndAlgorithms {
         }
 
 
+        /// <summary>
+        /// Генериуем граф из сети веток метро
+        /// </summary>
+        /// <param name="stationsCount">Кол-во веток</param>
+        /// <param name="lines">Сеть веток</param>
+        /// <returns>Граф метро</returns>
         private MetroGraph GenerateGraphFromMetroLines(int stationsCount, MetroLine[] lines) {
             MetroGraph metroGraph = new MetroGraph(stationsCount);
 

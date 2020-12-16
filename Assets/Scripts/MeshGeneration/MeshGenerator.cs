@@ -12,10 +12,14 @@ namespace MeshGeneration {
         /// Генерируем меш из заданных ранее в конструкторе параметров
         /// </summary>
         /// <returns></returns>
-        public Mesh GenerateMesh() {
+        public Mesh GenerateMesh(bool dynamicMesh) {
             Mesh mesh = new Mesh();
+            // Помечаем меш как динамический, если он будет "шататься" на CPU.
+            if (dynamicMesh == true) {
+                mesh.MarkDynamic();
+            }
+            
             MeshData meshData = GenerateMeshData();
-
             ApplyMeshDataToMesh(mesh, meshData);
             
             return mesh;

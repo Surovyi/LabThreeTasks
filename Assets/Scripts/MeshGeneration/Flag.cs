@@ -71,7 +71,7 @@ namespace MeshGeneration {
             };
             
             MeshGenerator meshGenerator = new MeshGenerator(generatorData);
-            Mesh flagMesh = meshGenerator.GenerateMesh();
+            Mesh flagMesh = meshGenerator.GenerateMesh(!m_useGpuAnimation);
 
             m_meshFilter.mesh = flagMesh;
             m_meshFilter.mesh.Optimize();

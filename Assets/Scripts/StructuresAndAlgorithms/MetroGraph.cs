@@ -192,6 +192,9 @@ namespace StructuresAndAlgorithms {
             }
         }
         
+        /// <summary>
+        /// Подчищаем переменные, которые применялись для поиска пути
+        /// </summary>
         private void ClearTracing() {
             for (int i = 0; i < m_stations.Length; i++) {
                 m_stations[i].IsVisited = false;
@@ -204,6 +207,13 @@ namespace StructuresAndAlgorithms {
             m_connections[end, start] = line;
         }
         
+        /// <summary>
+        /// Найти станцию соединенную с заданной.
+        /// При этом можно указать необходима любая станция или уже посещенная ранее.
+        /// </summary>
+        /// <param name="v">Индекс станции, чьих соседей мы ищем</param>
+        /// <param name="visited">Необходимо уже посещенная ранее станция?</param>
+        /// <returns></returns>
         private int GetConnectedStation(int v, bool visited = false) {
             for (int i = 0; i < m_stationsCount; i++) {
                 if (string.IsNullOrEmpty(m_connections[v, i]) == false && m_stations[i].IsVisited == visited) {
