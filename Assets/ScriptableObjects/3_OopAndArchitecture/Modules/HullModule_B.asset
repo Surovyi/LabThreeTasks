@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a17c7d513943268638ebb5dbe90d2a, type: 3}
+  m_Name: HullModule_B
+  m_EditorClassIdentifier: 
+  m_id: HullB
+  m_description: 'HP: +50'
+  m_effect: 0
+  m_amount: 50
+  m_modulePrefab: {fileID: 2525904239532369038, guid: ec3d8cb8dac6c8c4382bb34c79c22d7e,
+    type: 3}
